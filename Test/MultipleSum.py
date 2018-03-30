@@ -10,7 +10,7 @@ class MultipleSum:
         self.range_end = range_end
 
 
-    def MultiplesSum(self):
+    def multiple_sum(self):
         result = 0
         for i in range(self.range_start, self.range_end):
             for num in self.multiples_to_search:

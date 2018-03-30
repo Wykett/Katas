@@ -15,5 +15,4 @@ class Counting:
         values = count_dict.values()
         values = [int(x) for x in values]    
         values.sort(reverse=True);
-        print (values)
         return values[0:3]
