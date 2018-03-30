@@ -1,4 +1,5 @@
 from Counting import Counting
+from MultipleSum import MultipleSum
 
 #Test counting for url
 counting = Counting([
@@ -12,4 +13,10 @@ counting = Counting([
 	"http://gliacloud.com/haha.png"])
 
 result = counting.count()
+print (result)
+
+
+#Test multiple sum
+multipleSum = MultipleSum([3,5],1,10)
+result = multipleSum.MultiplesSum()
 print (result)
