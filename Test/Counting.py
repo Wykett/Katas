@@ -1,14 +1,19 @@
 class Counting:
-	urls = [
-"http://www.google.com/a.txt",
-"http://www.google.com.tw/a.txt",
-"http://www.google.com/download/c.jpg",
-"http://www.google.co.jp/a.txt",
-"http://www.google.com/b.txt",
-"https://facebook.com/movie/b.txt",
-"http://yahoo.com/123/000/c.jpg",
-"http://gliacloud.com/haha.png",
-]
+    urls = []
 
-	def count(self):
-		return 0
+    def __init__(self, urls):
+        self.urls = urls
+
+    def count(self):
+        count_dict = {}
+        for url in self.urls:
+            filename = url[url.rfind("/")+1:]
+            if filename in count_dict:
+                count_dict[filename] += 1
+            else:
+                count_dict[filename] = 1
+        values = count_dict.values()
+        values = [int(x) for x in values]    
+        values.sort(reverse=True);
+        print (values)
+        return values[0:3]
