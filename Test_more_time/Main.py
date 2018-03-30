@@ -48,4 +48,4 @@ subreddit_url = "https://www.reddit.com/r/todayilearned/"
 #How to test reddit parser
 reddit_parser = RedditParser(subreddit_url)
 reddit_parser_result = reddit_parser.parse_basic_informations()
-#print (reddit_parser_result)
+print (reddit_parser_result)
