@@ -1,3 +1,5 @@
+from collections import Counter
+
 class Counting:
     urls = []
 
@@ -12,7 +14,6 @@ class Counting:
                 count_dict[filename] += 1
             else:
                 count_dict[filename] = 1
-        values = count_dict.values()
-        values = [int(x) for x in values]    
-        values.sort(reverse=True);
-        return values[0:3]
+        c = Counter(count_dict)
+        mc = c.most_common(3)
+        return mc
